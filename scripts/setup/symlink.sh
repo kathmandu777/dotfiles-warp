@@ -31,10 +31,16 @@ create_symlink() {
     echo -e "${GREEN}  ✓ $(basename "$source") をリンクしました${NC}"
 }
 
-# dotfilesをリンク
 echo -e "${BLUE}→ 設定ファイルをリンクしています...${NC}"
+
+# ------------------------------------------------------------
+# dotfilesをリンク
+# ------------------------------------------------------------
 create_symlink "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 
+# ------------------------------------------------------------
+# Git設定
+# ------------------------------------------------------------
 # Git設定ディレクトリを作成
 mkdir -p "$HOME/.config/git"
 
@@ -52,6 +58,9 @@ if [ -f "$DOTFILES_DIR/starship.toml" ]; then
     create_symlink "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
 fi
 
+# ------------------------------------------------------------
+# Claude設定
+# ------------------------------------------------------------
 # Claude設定ディレクトリを作成
 mkdir -p "$HOME/.claude"
 

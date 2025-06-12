@@ -61,6 +61,7 @@ fi
 # 標準ディレクトリの作成
 echo -e "${BLUE}→ 標準ディレクトリを作成しています...${NC}"
 mkdir -p "$HOME/dev/projects"
+mkdir -p "$HOME/dev/ribura"
 mkdir -p "$HOME/.config"
 
 echo -e "${GREEN}✓ 初期化が完了しました！${NC}"
