@@ -52,4 +52,16 @@ if [ -f "$DOTFILES_DIR/starship.toml" ]; then
     create_symlink "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
 fi
 
+# Claude設定ディレクトリを作成
+mkdir -p "$HOME/.claude"
+
+# Claude設定ファイルをリンク
+if [ -f "$DOTFILES_DIR/dotfiles/claude/settings.json" ]; then
+    create_symlink "$DOTFILES_DIR/dotfiles/claude/settings.json" "$HOME/.claude/settings.json"
+fi
+
+if [ -f "$DOTFILES_DIR/dotfiles/claude/CLAUDE.md" ]; then
+    create_symlink "$DOTFILES_DIR/dotfiles/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+fi
+
 echo -e "${GREEN}✓ すべてのシンボリックリンクが正常に作成されました！${NC}"
