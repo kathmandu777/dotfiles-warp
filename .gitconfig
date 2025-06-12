@@ -5,6 +5,7 @@
 	ui = auto
 [core]
 	editor = vim
+	quotepath = false
 [secrets]
 	providers = git secrets --aws-provider
 	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
@@ -14,3 +15,6 @@
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [init]
 	templatedir = ~/.git-templates/secrets
+	defaultBranch = main
+[diff]
+    external = difft

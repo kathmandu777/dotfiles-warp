@@ -1,7 +1,8 @@
 # misc
 alias so='source'
 alias c='clear'
-alias vs='code .'
+alias cs='cursor .'
+alias vs='cursor .'
 alias tf='terraform'
 alias updatezshrc='source ~/.zshrc'
 
@@ -21,7 +22,7 @@ alias lsal='ls -alh --color=auto'
 
 # python
 alias py='python'
-alias activate='source venv/bin/activate'
+alias activate='source .venv/bin/activate'
 
 # dir path
 alias dev='cd $HOME/dev'
@@ -31,3 +32,6 @@ alias dot='cd $HOME/dotfiles-warp'
 # docker
 alias d='docker'
 alias dc='docker-compose' # Exists a command named 'dc' but overwrites it
+
+# rye
+alias rr='rye run python'
