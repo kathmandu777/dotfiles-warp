@@ -1,0 +1,188 @@
+{
+  // Editor
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "HackGen Console NFJ",
+  "editor.guides.indentation": false,
+  "editor.guides.bracketPairs": false,
+  "editor.accessibilitySupport": "off",
+  "editor.wordWrap": "off",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.inlayHints.enabled": "off",
+  "editor.stickyScroll.enabled": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  // Terminal
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.tabs.enabled": true,
+  "terminal.external.linuxExec": "/usr/bin/zsh",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  // Extensions
+  "extensions.autoCheckUpdates": true,
+  // GitHub Copilot
+  "github.copilot.autocomplete.enable": true,
+  "github.copilot.autocomplete.count": 5,
+  "github.copilot.editor.enableAutoCompletions": true,
+  // Git
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "always",
+  // Workbench
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.activityBar.orientation": "vertical",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f"
+  },
+  // TODO Tree
+  "todo-tree.general.tags": [
+    "TODO",
+    "FIXME"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check",
+      "foreground": "#ffa200",
+      "background": "#f4ecec"
+    },
+    "BUG": {
+      "icon": "bug"
+    },
+    "FIXME": {
+      "icon": "flame",
+      "foreground": "#FF0000",
+      "background": "#f4ecec"
+    }
+  },
+  // LaTeX
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.latex.outDir": "latex-output",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
+      ]
+    }
+  ],
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.dvi",
+    "*.bbl",
+    "*.blg",
+    "*.fdb_latexmk",
+    "*.fls",
+    "*.toc",
+    "*.pyg"
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk"
+    }
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
+  // 各言語の設定
+  // Python
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll.ruff": "explicit",
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "python.envFile": "${workspaceFolder}/.venv",
+  "[django-html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.languageServer": "Pylance",
+  "jupyter.askForKernelRestart": false,
+  // Json
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // JavaScript
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // TypeScript
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Markdown
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  // Others
+  "auto-rename-tag.activationOnLanguage": [
+    "html",
+    "django-html",
+    "xml",
+    "vue"
+  ],
+  "search.smartCase": true,
+  "eslint.codeActionsOnSave.rules": null,
+  "cSpell.language": "en,ja",
+  "security.promptForLocalFileProtocolHandling": false,
+  "cursor.cpp.disabledLanguages": [
+    "scminput"
+  ],
+  "redhat.telemetry.enabled": false,
+  "diffEditor.wordWrap": "off",
+  "remote.restoreForwardedPorts": false,
+  "remote.autoForwardPorts": false,
+  "remote.downloadExtensionsLocally": true,
+  "remote.extensionKind": {
+    "pub.name": [
+      "ui"
+    ]
+  },
+  "cursor.cpp.enablePartialAccepts": true,
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show",
+    "pnpm user dev",
+    "pnpm i",
+    "mkdir",
+    "rye run python",
+    "python",
+    "go",
+    "cd",
+    "go test"
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "gitlens.launchpad.indicator.enabled": false,
+  "files.associations": {
+    ".env": "dotenv"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "files.insertFinalNewline": true,
+  "database-client.autoSync": true,
+  "github.copilot.enable": {
+    "*": false,
+    "python": true
+  },
+  "editor.largeFileOptimizations": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "terminal.external.osxExec": "Warp.app",
+}

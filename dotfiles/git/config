@@ -1,0 +1,78 @@
+[user]
+	name = kathmandu777
+	email = mahhakatomanato@gmail.com
+
+[core]
+	editor = vim
+	quotepath = false
+	autocrlf = input
+	ignorecase = false
+
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+
+[push]
+	default = current
+	autoSetupRemote = true
+
+[pull]
+	rebase = true
+
+[fetch]
+	prune = true
+
+[merge]
+	ff = false
+
+[rebase]
+	autosquash = true
+	autostash = true
+
+[diff]
+	external = difft
+	algorithm = histogram
+
+[alias]
+	# ステータス系
+	st = status
+	ss = status -s
+
+	# ログ系
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ll = log --pretty=format:'%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]' --decorate --numstat
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
+	# ブランチ系
+	br = branch
+	co = checkout
+	cb = checkout -b
+	cm = !git checkout main || git checkout master
+	
+	# コミット系
+	ci = commit
+	ca = commit --amend
+	can = commit --amend --no-edit
+
+	# 差分系
+	d = diff
+	dc = diff --cached
+	ds = diff --stat
+
+	# その他
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	undo = reset --soft HEAD~1
+	aliases = config --get-regexp alias
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[init]
+	defaultBranch = main

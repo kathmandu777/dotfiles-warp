@@ -1,0 +1,112 @@
+# Starship Configuration for Warp Terminal
+
+# Timeout for commands
+command_timeout = 1000
+
+# Format
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$python\
+$ruby\
+$golang\
+$rust\
+$java\
+$docker_context\
+$line_break\
+$character"""
+
+# Directory
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+format = "[$path]($style) "
+style = "cyan bold"
+
+# Git branch
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = "🌱 "
+style = "bold green"
+
+# Git status
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bold red"
+
+# Character
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
+# Username
+[username]
+disabled = false
+show_always = false
+format = "[$user]($style) "
+style_user = "yellow bold"
+style_root = "red bold"
+
+# Hostname
+[hostname]
+disabled = false
+ssh_only = true
+format = "[@$hostname]($style) "
+style = "green bold"
+
+# Node.js
+[nodejs]
+format = "[$symbol($version )]($style)"
+symbol = "⬢ "
+style = "bold green"
+detect_extensions = ["js", "mjs", "cjs", "ts", "mts", "cts"]
+
+# Python
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = "🐍 "
+style = "yellow bold"
+pyenv_version_name = true
+
+# Ruby
+[ruby]
+format = "[$symbol($version )]($style)"
+symbol = "💎 "
+style = "bold red"
+
+# Go
+[golang]
+format = "[$symbol($version )]($style)"
+symbol = "🐹 "
+style = "bold cyan"
+
+# Rust
+[rust]
+format = "[$symbol($version )]($style)"
+symbol = "🦀 "
+style = "bold red"
+
+# Java
+[java]
+format = "[$symbol($version )]($style)"
+symbol = "☕ "
+style = "red dimmed"
+
+# Docker
+[docker_context]
+format = "[$symbol$context]($style) "
+symbol = "🐳 "
+style = "blue bold"
+only_with_files = true
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+
+# Time
+[time]
+disabled = true
+format = '[$time]($style) '
+style = "bold white"
+use_12hr = false
