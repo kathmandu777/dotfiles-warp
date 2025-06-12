@@ -47,20 +47,12 @@ make
 - **エディタ**: Cursor, VS Code
 - **ターミナル**: Warp（最新のAI搭載ターミナル）
 - **Git**: gh（GitHub CLI）、git-secrets
-- **データベース**: DBeaver
 - **コンテナ**: Docker Desktop
-- **API開発**: HTTPie
 
 #### **生産性向上ツール**
 
 - **ランチャー**: Raycast（Spotlight代替）
-- **ウィンドウ管理**: AutoRaise
 - **キーボード**: Karabiner-Elements
-- **翻訳**: DeepL
-
-#### **コミュニケーション**
-
-- Slack, Discord, LINE, Teams, Zoom
 
 ### 3️⃣ モダンCLIツール（従来のコマンドを置き換え）
 
@@ -107,26 +99,37 @@ make
 
 ```
 ~/dotfiles-warp/
-├── Makefile              # メインセットアップ
-├── README.md             # このファイル
-├── CLAUDE.md             # 開発者向けドキュメント
+├── Makefile              # メインのセットアップスクリプト
+├── README.md             # ユーザー向けドキュメント
+├── CLAUDE.md             # このファイル（開発者向け）
 ├── .zshrc                # Zsh設定
-├── .gitconfig            # Git設定
-├── .gitignore            # グローバルgitignore  
 ├── starship.toml         # プロンプト設定
-├── alias/                # エイリアス定義
-│   ├── common.sh         # 共通ショートカット
-│   ├── git.sh            # Gitエイリアス
-│   └── atcoder.sh        # AtCoder用
-├── bin/                  # セットアップスクリプト
-│   ├── init.sh           # システム初期化
-│   ├── link.sh           # シンボリックリンク作成
-│   ├── asdf-setup.sh     # asdfプラグイン設定
-│   └── Brewfile          # Homebrewパッケージ
-├── config/               # アプリケーション設定
-│   └── macos/            # macOS設定
-│       └── defaults.sh   # システム設定スクリプト
-└── local/                # ローカル専用スクリプト
+├── dotfiles/             # symlink対象ファイル（.で始まるファイル）
+│   ├── git/
+│   │   ├── config        # Git設定
+│   │   └── ignore        # グローバルgitignore
+│   ├── vscode/           # VSCode設定
+│   │   ├── settings.json
+│   │   └── keybindings.json
+│   └── cursor/           # Cursor設定
+│       ├── settings.json
+│       └── keybindings.json
+├── scripts/              # セットアップ・メンテナンススクリプト
+│   ├── setup/
+│   │   ├── init.sh       # 初期化スクリプト
+│   │   ├── symlink.sh    # シンボリックリンク作成
+│   │   ├── asdf.sh       # asdf設定
+│   │   └── macos.sh      # macOS設定
+│   ├── sync/             # 自動同期スクリプト
+│   │   ├── brewfile.sh   # Brewfile自動生成
+│   │   ├── vscode.sh     # VSCode設定同期
+│   │   └── cursor.sh     # Cursor設定同期
+│   └── Brewfile          # Homebrewパッケージリスト
+└── shell/                # シェル関連設定
+    ├── aliases/
+    │   ├── common.sh     # 共通エイリアス
+    │   └── git.sh        # Gitエイリアス
+    └── functions/        # シェル関数（将来用）
 ```
 
 ## 🔧 使い方
